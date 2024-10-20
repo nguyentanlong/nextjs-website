@@ -13,7 +13,7 @@ export const generateMetadata = ({ params }: Thuoc): Metadata => {
 };
 export default function Home2({ params }: Thuoc) {
     // const params = useParams();
-    console.log(">>> Check thuộc tính: >>", params.blogid);
+    // console.log(">>> Check thuộc tính: >>", params.blogid);
     return (
         <div className={styles.page}>
             <main className={styles.main}>

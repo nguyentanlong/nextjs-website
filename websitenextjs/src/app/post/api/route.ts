@@ -33,13 +33,14 @@ export async function POST(yc: NextRequest) {
 
 // lấy tất cả từ database
 export async function GET(yc: NextRequest) {
-    // await connectDB();
+    await connectDB();
     try {
         // const { ten, moTaNgan } = await yc.json();
         // console.log(">>>  ", ten, "  >>>  ", moTaNgan);
         // const isExit = await Post.findOne({ ten });
         // console.log(">>>  isExit", isExit, "  >>  ", typeof (isExit)); // [], object
         // if (!isExit) {
+
         const limit = yc.nextUrl.searchParams.get("limit") ?? 2//thực tế 10 sp
         const page = yc.nextUrl.searchParams.get("page") ?? 1
         const totalPost = await Post.countDocuments();
